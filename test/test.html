@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.min.css" rel="stylesheet">
+  <style>
+  body {font-size: 14px;}
+  .text {
+    margin: 10px;
+    width:200px;
+    max-height:40px;
+    border:1px solid black;
+    overflow-y:hidden;
+    line-height: 20px;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.1.0/chai.min.js"></script>
+  <script src="../src/flextext.js"></script>
+
+
+</head>
+<body>
+
+  <div id="mocha"></div>
+
+  <div id="original">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+
+  <div id="text1" class="text"></div>
+
+  <div id="text2" class="text">
+      asd  asdf asdf a sdf a asdf df sd sdf sdfs
+      dd ddddf df sadfa sdfa sdfa sdfas dfasd fasdf
+      asdf adsfsf sdf as dfad END
+  </div>
+
+  <div id="text3" class="text">
+      asd  asdf asdf a sdf a asdf df sd sdf sdfs
+      dd ddddf df sadfa sdfa sdfa sdfas dfasd fasdf
+      asdf adsfsf sdf as dfad END
+  </div>
+
+  <script>mocha.setup('bdd')</script>
+  <script src="test.js"></script>
+  <script>
+  mocha.checkLeaks();
+  mocha.run();
+  </script>
+</body>
+</html>

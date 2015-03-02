@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <style>
+    .text {
+        margin: 10px;
+        width:200px;
+        max-height:160px;
+        line-height: 1em;
+        font-size:15px;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../src/flextext.js"></script>
+
+
+
+</head>
+<body>
+
+<div id="text1" class="text">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
+
+<div id="text2" class="text">
+    asd  asdf asdf a sdf a asdf df sd sdf sdfs
+    dd ddddf df sadfa sdfa sdfa sdfas dfasd fasdf
+    asdf adsfsf sdf as dfad END
+</div>
+
+<div id="text3" class="text">
+    asd  asdf asdf a sdf a asdf df sd sdf sdfs
+    dd ddddf df sadfa sdfa sdfa sdfas dfasd fasdf
+    asdf adsfsf sdf as dfad END
+</div>
+
+<script>
+
+    $('#text1').flexText({fontSize:false,letterSpacing:false,verbose:false})
+/*    $('#text2').flexText({verbose:true,addTitle:false})
+    $('#text3').flexText({verbose:true})
+*/
+</script>
+</body>
+</html>
