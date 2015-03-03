@@ -16,7 +16,7 @@ on not webkit browsers.
     bower install flextext
 
 ### Manually
-  Download `dist/flextext-[version].min.js` and add it to your code after jQuery
+  Download `dist/flextext-[version].min.js` and add it to your html after jQuery
 
 ## Usage
 
@@ -39,11 +39,11 @@ on not webkit browsers.
 ## Default options
 ```json
 {
-  letterSpacing: 0.5,
-  fontSize: 90,
-  cutText: '\u2026',
-  addTitle: true,
-  verbose: false
+  "letterSpacing": 0.5,
+  "fontSize": 90,
+  "cutText": "\u2026",
+  "addTitle": true,
+  "verbose": false
 }
 ```
 
