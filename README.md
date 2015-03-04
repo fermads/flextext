@@ -1,9 +1,10 @@
-## Purpose
+# flexText
 
-Polyfill for multi-line `overflow:ellipsis` with the following strategy to make text fit:
+jQuery plugin for multi-line `overflow:ellipsis` with the following
+strategy to make text fit:
 
-1. lower letter spacing (optional)
-2. lower font size (optional)
+1. make letter spacing smaller by steps of 0.1px (optional)
+2. make font size smaller by steps of 2% (optional)
 3. cut text and add ellipsis
 
 CSS `overflow:ellipsis` only work for 1 line of text. For multiple lines
@@ -16,7 +17,8 @@ on not webkit browsers.
     bower install flextext
 
 ### Manually
-  Download `dist/flextext-[version].min.js` and add it to your html after jQuery
+  Download `dist/flextext-[version].min.js` and add it to your html
+  after jQuery
 
 ## Usage
 
@@ -26,14 +28,18 @@ on not webkit browsers.
 
 2. call flexText
 
-        $('.selector').flexText([options]);
+    $('.selector').flexText([options]);
 
 *[options] object with the following optional properties:*
 
-- **letterSpacing** (value in px | false): how many subpixels can the text be crunched to try to fit. false to disable
-- **fontSize** (value in % | false): how far it can resize font to try to fit text. false to disable
-- **cutText** (string | false): used when the text is cut. Usually \u2026 (ellipsis) or "..."
-- **addTitle** (true | false): also add text to the $('$selector').attr('title')
+- **letterSpacing** (value in px | false): how many subpixels can the text
+  be crunched to try to fit. Steps of 0.1px. Set to false to disable
+- **fontSize** (value in % | false): how far it can resize font to try
+  to fit text. Steps of 2%. Set to false to disable
+- **cutText** (string | false): used when the text is cut.
+  Usually \u2026 (ellipsis) or "..."
+- **addTitle** (true | false): also add text to the
+  $('$selector').attr('title')
 - **verbose** (true | false): console.log everything that is happening
 
 ## Default options

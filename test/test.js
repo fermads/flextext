@@ -2,13 +2,13 @@ var should = chai.should();
 var expect = chai.expect;
 
 var $el, text;
-$('#original, #original2').hide();
+$('#text-holder').hide();
 
 function reset() {
-  $('#text1').remove();
+  $('.text').remove();
   $('body').append('<div id="text1" class="text"></div>');
-  $el = $('#text1');
-  $el.text($('#original').text());
+  $el = $('.text');
+  $el.text($('#text-holder').text());
 
   text = $el.text();
 }
@@ -17,7 +17,7 @@ describe('Initialization', function(){
 
   before(function() {
     reset();
-    $('#text1').flexText();
+    $('.text').flexText();
   });
 
   it('.data("flexText") should be equal .text()', function() {
@@ -25,8 +25,8 @@ describe('Initialization', function(){
   });
 
   it('should get original text from data attribute', function() {
-    $('#text1').text(''); // remove text
-    $('#text1').flexText(); // text should come from dataAttribute
+    $('.text').text(''); // remove text
+    $('.text').flexText(); // text should come from dataAttribute
     $el.data('flexText').should.be.equal(text);
   });
 
@@ -38,7 +38,7 @@ describe('Initialization', function(){
     var mx = $el.css('max-height');
     try {
       $el.css('max-height', 0);
-      $('#text1').flexText();
+      $('.text').flexText();
     }
     catch(e) {
       expect(e).to.be.an.instanceOf(Error);
@@ -50,7 +50,7 @@ describe('Initialization', function(){
 describe('Configuration (default values)', function(){
   before(function() {
     reset();
-    $('#text1').flexText();
+    $('.text').flexText();
   });
 
   it('letterSpacing', function() {
@@ -58,7 +58,7 @@ describe('Configuration (default values)', function(){
   });
 
   it('fontSize', function() {
-    parseInt($el.css('fontSize'), 10).should.be.equal(12);
+    parseInt($el.css('fontSize'), 10).should.be.equal(14);
   });
 
   it('cutText', function() {
@@ -83,7 +83,7 @@ describe('Configuration (default values)', function(){
 describe('Configuration (non-default values)', function(){
   before(function(){
     reset();
-    $('#text1').flexText({
+    $('.text').flexText({
       letterSpacing:1,
       fontSize: 70,
       cutText:'...',
@@ -98,7 +98,7 @@ describe('Configuration (non-default values)', function(){
   });
 
   it('fontSize', function() {
-    parseInt($el.css('fontSize'), 10).should.be.equal(9);
+    parseInt($el.css('fontSize'), 10).should.be.equal(11);
   });
 
   it('cutText', function() {

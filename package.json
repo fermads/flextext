@@ -1,16 +1,22 @@
 {
-  "name": "flexText",
-  "description": "Make text fit",
+  "name": "flextext",
+  "description": "jQuery plugin to make text fit",
   "version": "1.1.5",
-  "authors": ["fermads"],
+  "author": "Fernando MAdS <fermads@gmail.com>",
+  "keywords": [
+    "plugin",
+    "text",
+    "ellipsis",
+    "line-clamp"
+  ],
   "devDependencies": {
     "gulp": "^3.8.11",
-    "gulp-concat": "^2.5.0",
     "gulp-uglify": "^1.1.0",
     "gulp-rename": "^1.2.0"
   },
   "scripts": {
     "build": "gulp",
     "test": ""
-  }
+  },
+  "license": "MIT"
 }
