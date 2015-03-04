@@ -9,14 +9,14 @@ strategy to make text fit:
 
 CSS `overflow:ellipsis` only work for 1 line of text. For multiple lines
 -webkit-line-clamp is needed, but it is not supported (as of 02/03/2015)
-on not webkit browsers.
+on non-webkit browsers.
 
 ## Instalation
 
-### Bower
+#### Bower
     bower install flextext
 
-### Manually
+#### Manually
   Download `dist/flextext-[version].min.js` and add it to your html
   after jQuery
 
@@ -62,7 +62,7 @@ on not webkit browsers.
     $('.selector').data('flexTextConfig').cutText;
 
 ##### Why there is some other css on the selector?
-Some CSS is required for this to work and will be set automatically
+Some CSS is required for flexText to work and will be set automatically
 ```css
 {
   overflow-y: hidden,
