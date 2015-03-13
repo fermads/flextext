@@ -1,4 +1,3 @@
-var should = chai.should();
 var expect = chai.expect;
 
 var $el, text;
@@ -21,17 +20,17 @@ describe('Initialization', function(){
   });
 
   it('.data("flexText") should be equal .text()', function() {
-    $el.data('flexText').should.be.equal(text);
+    expect($el.data('flexText')).to.be.equal(text);
   });
 
   it('should get original text from data attribute', function() {
     $('.text').text(''); // remove text
     $('.text').flexText(); // text should come from dataAttribute
-    $el.data('flexText').should.be.equal(text);
+    expect($el.data('flexText')).to.be.equal(text);
   });
 
   it('text should be cut and have ...', function() {
-    $el.text().should.contain($el.data('flexTextConfig').cutText);
+    expect($el.text()).to.contain($el.data('flexTextConfig').cutText);
   });
 
   it('should throw if max-height is not defined', function() {
@@ -54,28 +53,28 @@ describe('Configuration (default values)', function(){
   });
 
   it('letterSpacing', function() {
-    $el.css('letterSpacing').should.be.equal('-0.5px');
+    expect($el.css('letterSpacing')).to.be.equal('-0.5px');
   });
 
   it('fontSize', function() {
-    parseInt($el.css('fontSize'), 10).should.be.equal(14);
+    expect(parseInt($el.css('fontSize')), 10).to.be.equal(14);
   });
 
   it('cutText', function() {
-    $el.data('flexTextConfig').cutText.should.be.equal('\u2026');
+    expect($el.data('flexTextConfig').cutText).to.be.equal('\u2026');
   });
 
   it('dataAttr', function() {
-    $el.data('flexText').should.be.equal(text);
+   expect( $el.data('flexText')).to.be.equal(text);
   });
 
   it('addTitle', function() {
-    $el.attr('title').should.be.equal(text);
-    $el.data('flexTextConfig').addTitle.should.be.true;
+    expect($el.attr('title')).to.be.equal(text);
+    expect($el.data('flexTextConfig').addTitle).to.be.true;
   });
 
   it('verbose', function() {
-    $el.data('flexTextConfig').verbose.should.be.false;
+   expect( $el.data('flexTextConfig').verbose).to.be.false;
   });
 
 });
@@ -89,32 +88,32 @@ describe('Configuration (non-default values)', function(){
       cutText:'...',
       dataAttr: 'flexy',
       addTitle: false,
-      verbose: false
+      verbose: true
     });
   });
 
   it('letterSpacing', function() {
-    $el.css('letterSpacing').should.be.equal('-1px');
+   expect( $el.css('letterSpacing')).to.be.equal('-1px');
   });
 
   it('fontSize', function() {
-    parseInt($el.css('fontSize'), 10).should.be.equal(11);
+    expect(parseInt($el.css('fontSize'), 10)).to.be.equal(11);
   });
 
   it('cutText', function() {
-    $el.data('flexTextConfig').cutText.should.be.equal('...');
+    expect($el.data('flexTextConfig').cutText).to.be.equal('...');
   });
 
   it('dataAttr', function() {
-    $el.data('flexy').should.be.equal(text);
+   expect( $el.data('flexy')).to.be.equal(text);
   });
 
   it('addTitle', function() {
     expect($el.attr('title')).to.be.undefined;
-    $el.data('flexTextConfig').addTitle.should.be.false;
+   expect( $el.data('flexTextConfig').addTitle).to.be.false;
   });
 
   it('verbose', function() {
-    $el.data('flexTextConfig').verbose.should.be.false;
+    expect($el.data('flexTextConfig').verbose).to.be.true;
   });
 });

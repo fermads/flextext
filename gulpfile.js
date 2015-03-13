@@ -10,7 +10,6 @@ gulp.task('default', function() {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('git', function() {
-  gulp.src('**')
-    .pipe(gulp.dest('../../../Git/FlexText'));
+gulp.task('test', function() {
+
 });

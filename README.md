@@ -13,10 +13,6 @@ on non-webkit browsers.
 
 ## Instalation
 
-#### Bower
-    bower install flextext
-
-#### Manually
   Download `dist/flextext-[version].min.js` and add it to your html
   after jQuery
 
@@ -39,7 +35,7 @@ on non-webkit browsers.
 - **cutText** (string | false): used when the text is cut.
   Usually \u2026 (ellipsis) or "..."
 - **addTitle** (true | false): also add text to the
-  $('$selector').attr('title')
+  $('.selector').attr('title')
 - **verbose** (true | false): console.log everything that is happening
 
 ## Default options
