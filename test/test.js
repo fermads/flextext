@@ -117,3 +117,54 @@ describe('Configuration (non-default values)', function(){
     expect($el.data('flexTextConfig').verbose).to.be.true;
   });
 });
+
+describe('Text fit strategy', function(){
+  it('Should fit only by reducing letterSpacing '+
+      '(no font size change or text cutting)', function() {
+    reset();
+    $('.text').text($('.text').text().substring(0,70));
+    $('.text').flexText({
+      letterSpacing:2,
+      fontSize: 70,
+      cutText:'...',
+      dataAttr: 'flexy',
+      addTitle: false,
+      verbose: true
+    });
+   expect( $el.text().indexOf('...')).to.be.equal(-1);
+   expect( $el.css('fontSize')).to.be.equal('16px');
+  });
+
+  it('Should fit only by reducing font size '+
+      '(no letter spacing change or text cutting)', function() {
+    reset();
+    $('.text').text($('.text').text().substring(0,70));
+    $('.text').flexText({
+      letterSpacing:false,
+      fontSize: 70,
+      cutText:'...',
+      dataAttr: 'flexy',
+      addTitle: false,
+      verbose: true
+    });
+   expect( $el.text().indexOf('...')).to.be.equal(-1);
+   expect( parseInt($el.css('fontSize'))).to.be.equal(14);
+  });
+
+  it('Should fit only by cutting the text '+
+      '(no letter spacing or font size changes)', function() {
+    reset();
+    $('.text').text($('.text').text().substring(0,70));
+    $('.text').flexText({
+      letterSpacing:false,
+      fontSize: false,
+      cutText:'...',
+      dataAttr: 'flexy',
+      addTitle: false,
+      verbose: true
+    });
+   expect( $el.text().indexOf('...')).to.be.not.equal(-1);
+  });
+
+
+});
