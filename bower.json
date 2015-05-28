@@ -15,7 +15,7 @@
   ],
   "license": "MIT",
   "ignore": [
-    "dist/flextext-*.js"
+    "dist/flextext-*.js",
     "src",
     "test",
     ".gitignore",
