@@ -5,7 +5,7 @@
   "authors": [
     "Fernando MAdS <fermads@gmail.com>"
   ],
-  "description": "jQuery plugin to make text fit inside another element",
+  "description": "jQuery plugin for multi-line overflow:ellipsis and other text manipulations to make it fit inside another element",
   "main": "dist/flextext.min.js",
   "keywords": [
     "plugin",
