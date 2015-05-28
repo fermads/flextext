@@ -7,5 +7,7 @@ gulp.task('default', function() {
   gulp.src('src/**/*.js')
     .pipe(uglify())
     .pipe(rename(package.name +'-'+ package.version +'.min.js'))
+    .pipe(gulp.dest('dist/'))
+    .pipe(rename('flextext.min.js'))
     .pipe(gulp.dest('dist/'));
 });

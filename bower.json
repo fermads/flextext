@@ -1,0 +1,29 @@
+{
+  "name": "jquery-flextext",
+  "version": "1.1.6",
+  "homepage": "https://github.com/fermads/flextext",
+  "authors": [
+    "Fernando MAdS <fermads@gmail.com>"
+  ],
+  "description": "jQuery plugin to make text fit inside another element",
+  "main": "dist/flextext.min.js",
+  "keywords": [
+    "plugin",
+    "text",
+    "ellipsis",
+    "line-clamp"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "dist/flextext-*.js"
+    "src",
+    "test",
+    ".gitignore",
+    ".jshintrc",
+    "bower.json",
+    "license",
+    "gulpfile.js",
+    "package.json",
+    "readme.md"
+  ]
+}
